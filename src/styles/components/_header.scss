@@ -1,0 +1,74 @@
+@use '../utils/color';
+
+.header {
+  height: 120px;
+  display: flex;
+  border-bottom: 0.5px solid #cccccc;
+  .header__content {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo {
+      display: flex;
+      align-items: center;
+      font-size: 4rem;
+      height: 100%;
+
+      &:hover {
+        color: color.$color-2;
+        cursor: pointer;
+      }
+    }
+    .header__nav {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      margin: 0;
+      .header__nav-btn {
+        display: none;
+      }
+      ul {
+        text-align: center;
+        padding: 3rem;
+        font-size: 2rem;
+        &:hover {
+          color: color.$color-2;
+          cursor: pointer;
+        }
+      }
+    }
+    @media all and (max-width: 1440px) {
+      .header__logo {
+        margin: 0 0 0 5rem;
+      }
+      .header__nav {
+        width: 6rem;
+        height: 6rem;
+        margin: 0 5rem 0 0;
+        border: 0.5px solid #cccccc;
+        border-radius: 1rem;
+        color: #cccccc;
+        &:hover {
+          cursor: pointer;
+          .header__nav-btn {
+            color: #999999;
+          }
+        }
+        .header__nav-btn {
+          display: block;
+          margin: 0 auto;
+          font-size: 3rem;
+        }
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+}
