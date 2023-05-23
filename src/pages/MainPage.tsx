@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Profile from '@components/Profile';
@@ -6,10 +8,11 @@ import Educations from '@components/Educations';
 import Projects from '@components/Projects';
 
 function MainPage() {
+  const [marginTop, setMarginTop] = useState<number>(0);
   return (
     <div className="main-page">
-      <Header />
-      <div className="main-page__content">
+      <Header setMarginTop={setMarginTop} />
+      <div className="main-page__content" style={{ marginTop: marginTop }}>
         <Profile />
         <Skills />
         <Educations />

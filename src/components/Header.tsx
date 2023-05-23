@@ -1,15 +1,22 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 
-function Header() {
+function Header({ setMarginTop }: any) {
+  const headerRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleNavBtnClick = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    if (headerRef.current !== null) {
+      setMarginTop(headerRef.current.clientHeight);
+    }
+  }, []);
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="header__content">
         <div className="header__logo hana">KOEH's Portfolio</div>
         <button className="header__nav-btn" onClick={handleNavBtnClick}>
