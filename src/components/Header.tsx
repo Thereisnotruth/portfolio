@@ -9,7 +9,7 @@ function Header() {
   };
 
   return (
-    <div className="header">
+    <header className="header">
       <div className="header__content">
         <div className="header__logo hana">KOEH's Portfolio</div>
         <button className="header__nav-btn" onClick={handleNavBtnClick}>
@@ -24,7 +24,7 @@ function Header() {
           <ul>Projects</ul>
         </li>
       </div>
-    </div>
+    </header>
   );
 }
 

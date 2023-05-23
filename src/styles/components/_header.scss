@@ -2,6 +2,7 @@
 
 .header {
   border-bottom: 0.5px solid #cccccc;
+  background-color: color.$color-4;
   .header__content {
     display: flex;
     flex-wrap: wrap;
@@ -12,13 +13,12 @@
     height: 100%;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     .header__logo {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
     .header__nav-btn {
       display: flex;
-      font-size: 2rem;
+      font-size: 1.6rem;
       border-radius: 0.5rem;
       padding: 0.5rem;
       color: #cccccc;
@@ -28,16 +28,29 @@
   }
   .header__nav {
     max-height: 0;
-    overflow: hidden;
     transition: max-height 0.2s ease-in-out;
     list-style-type: none;
-    ul {
-      padding: 0;
-      z-index: 1;
-      text-align: center;
+    overflow: hidden;
+    position: absolute;
+    background-color: color.$color-4;
+    width: 100%;
+    border-bottom: 0.5px solid #cccccc;
+    li {
+      ul {
+        margin-top: 0;
+        padding: 0;
+        z-index: 1;
+        text-align: center;
+        @media only screen and (min-width: 481px) and (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+      }
     }
   }
   .header__nav--clicked {
     max-height: 180px;
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+      max-height: 220px;
+    }
   }
 }
