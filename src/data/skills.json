@@ -3,12 +3,12 @@
     "html", "css", "js", "ts", "sass", "react", "recoil", "tailwind", "vite"
   ],
   "backend": [
-    "firebase", "springboot", "express", "mysql", "mongodb"
+    "firebase", "springboot", "express", "mysql", "mongodb", "docker"
   ],
   "certificate": [
     "정보처리기사"
   ],
-  "etc": [
-    "docker", "git", "figma"
+  "collaborate": [
+    "git", "figma", "notion"
   ]
 }

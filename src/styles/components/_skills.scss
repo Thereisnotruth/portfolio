@@ -1,0 +1,33 @@
+.skills {
+  display: flex;
+  border-bottom: 0.5px solid #cccccc;
+  .skills__container {
+    width: 80%;
+    margin: 0 auto;
+    .skills__title {
+      font-size: 2rem;
+      text-align: start;
+    }
+    .skills__row {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      .skills__icon {
+        font-size: 1.5rem;
+        width: 10%;
+      }
+      .skills__label {
+        width: 30%;
+      }
+      .skills__content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 60%;
+        .skills__item {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
