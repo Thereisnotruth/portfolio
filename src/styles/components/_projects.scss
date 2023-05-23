@@ -1,0 +1,32 @@
+.projects {
+  display: flex;
+  border-bottom: 0.5px solid #cccccc;
+  .projects__container {
+    width: 80%;
+    margin: 0 auto;
+    .projects__title {
+      font-size: 2rem;
+      text-align: start;
+    }
+    .projects__row {
+      padding: 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .projects__icon {
+        font-size: 1.5rem;
+        width: 10%;
+      }
+      .educations__label {
+        width: 50%;
+      }
+      .educations__content {
+        width: 40%;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

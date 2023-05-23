@@ -13,8 +13,8 @@ function Educations() {
     <div className="educations">
       <div className="educations__container">
         <div className="educations__title hana">Educations</div>
-        {educationJson['educations'].map((education: Education) => (
-          <div className="educations__row">
+        {educationJson['educations'].map((education: Education, index: number) => (
+          <div className="educations__row" key={index}>
             <BsPencilFill className="educations__icon" />
             <div className="educations__label hana">
               <div>{education.name}</div>
