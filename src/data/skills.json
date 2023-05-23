@@ -1,0 +1,14 @@
+{
+  "frontend": [
+    "html", "css", "js", "ts", "sass", "react", "recoil", "tailwind", "vite"
+  ],
+  "backend": [
+    "firebase", "springboot", "express", "mysql", "mongodb"
+  ],
+  "certificate": [
+    "정보처리기사"
+  ],
+  "etc": [
+    "docker", "git", "figma"
+  ]
+}
