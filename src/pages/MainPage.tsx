@@ -1,8 +1,9 @@
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Profile from '@components/Profile';
-import Skills from '@components/Skill';
-import Education from '@components/Education';
+import Skills from '@components/Skills';
+import Educations from '@components/Educations';
+import Projects from '@components/Projects';
 
 function MainPage() {
   return (
@@ -11,7 +12,8 @@ function MainPage() {
       <div className="main-page__content">
         <Profile />
         <Skills />
-        <Education />
+        <Educations />
+        <Projects />
       </div>
       <Footer />
     </div>
