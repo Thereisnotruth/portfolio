@@ -1,6 +1,8 @@
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Profile from '@components/Profile';
+import Skills from '@components/Skill';
+import Education from '@components/Education';
 
 function MainPage() {
   return (
@@ -8,6 +10,8 @@ function MainPage() {
       <Header />
       <div className="main-page__content">
         <Profile />
+        <Skills />
+        <Education />
       </div>
       <Footer />
     </div>
