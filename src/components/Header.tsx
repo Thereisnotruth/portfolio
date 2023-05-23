@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AiOutlineMenu } from '@react-icons/all-files/ai/AiOutlineMenu';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 function Header() {
   const [isOpen, setIsOpen] = useState<boolean>(false);

@@ -1,0 +1,30 @@
+@use '../utils/color';
+
+.profile {
+  display: flex;
+  border-bottom: 0.5px solid #cccccc;
+  .profile__container {
+    width: 80%;
+    margin: 0 auto;
+    .profile__title {
+      font-size: 2rem;
+      text-align: start;
+    }
+    .profile__row {
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+      .profile__icon {
+        font-size: 1.5rem;
+        width: 10%;
+      }
+      .profile__label {
+        align-items: center;
+        width: 20%;
+      }
+      .profile__content {
+        width: 70%;
+      }
+    }
+  }
+}
