@@ -1,0 +1,6 @@
+@use '../utils/color';
+
+.footer {
+  background-color: color.$color-1;
+  color: white;
+}

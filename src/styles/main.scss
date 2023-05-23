@@ -1,5 +1,9 @@
+// utils
 @use './utils/typography';
 
+// components
 @use './components/header';
+@use './components/footer';
 
+// pages
 @use './pages/main-page';
