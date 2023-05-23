@@ -5,7 +5,6 @@ import { SiVelog } from 'react-icons/si';
 import profileJson from '@data/profile.json';
 
 function Profile() {
-  console.log(profileJson);
   return (
     <div className="profile">
       <div className="profile__container">
@@ -18,7 +17,9 @@ function Profile() {
         <div className="profile__row">
           <AiOutlineMail className="profile__icon" />
           <div className="profile__label hana">이메일</div>
-          <div className="profile__content hana">{profileJson['e-mail']}</div>
+          <div className="profile__content hana">
+            <a href={`mailto:${profileJson['e-mail']}`}>{profileJson['e-mail']}</a>
+          </div>
         </div>
         <div className="profile__row">
           <SiVelog className="profile__icon" />
