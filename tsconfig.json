@@ -21,6 +21,7 @@
 
     "baseUrl": ".",
     "paths": {
+      "@data/*": ["src/data/*"],
       "@styles/*": ["src/styles/*"],
       "@pages/*": ["src/pages/*"],
       "@components/*": ["src/components/*"],
