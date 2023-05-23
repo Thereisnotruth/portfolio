@@ -23,12 +23,16 @@ function Profile() {
         <div className="profile__row">
           <SiVelog className="profile__icon" />
           <div className="profile__label hana">블로그</div>
-          <div className="profile__content hana">{profileJson.blog}</div>
+          <div className="profile__content hana">
+            <a href={profileJson.blog}>{profileJson.blog}</a>
+          </div>
         </div>
         <div className="profile__row">
           <BsGithub className="profile__icon" />
           <div className="profile__label hana">git</div>
-          <div className="profile__content hana">{profileJson.git}</div>
+          <div className="profile__content hana">
+            <a href={profileJson.git}>{profileJson.git}</a>
+          </div>
         </div>
         <div className="profile__row hana">{profileJson.description}</div>
       </div>
