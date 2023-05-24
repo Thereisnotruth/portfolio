@@ -8,24 +8,10 @@
       font-size: 2rem;
       text-align: start;
     }
-    .projects__row {
-      padding: 1rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      .projects__icon {
-        font-size: 1.5rem;
-        width: 10%;
-      }
-      .educations__label {
-        width: 50%;
-      }
-      .educations__content {
-        width: 40%;
-        a {
-          color: black;
-          text-decoration: none;
-        }
+    .projects__project {
+      padding-bottom: 1rem;
+      .projects__name {
+        font-size: 1.6rem;
       }
     }
   }

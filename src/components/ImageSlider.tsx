@@ -3,10 +3,11 @@ import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
 
 function ImageSlider({ images }: any) {
   const imageRef = useRef<HTMLDivElement>(null);
+  const imageSliderRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState<number>(0);
   const [startX, setStartX] = useState<number>(0);
   const [transX, setTransX] = useState<number>(0);
-  const [imageIndex, setImageIndex] = useState<number>(0);
+  const [imageIndex, setImageIndex] = useState<number>(1);
 
   // 드래그하기 위해 터치 시 시작 좌표 설정
   const onTouchDown = (event: React.TouchEvent<HTMLElement>) => {
@@ -16,18 +17,16 @@ function ImageSlider({ images }: any) {
   // 왼쪽 이미지 보기
   const handleImageLeft = () => {
     if (imageIndex > 0) {
+      imageSliderRef.current!.style.transition = '0.2s';
       setImageIndex(imageIndex - 1);
-    } else {
-      setImageIndex(images.length - 1);
     }
   };
 
   // 오른쪽 이미지 보기
   const handleImageRight = () => {
-    if (imageIndex < images.length - 1) {
+    if (imageIndex < images.length + 1) {
+      imageSliderRef.current!.style.transition = '0.2s';
       setImageIndex(imageIndex + 1);
-    } else {
-      setImageIndex(0);
     }
   };
 
@@ -58,6 +57,22 @@ function ImageSlider({ images }: any) {
       setWidth(imageRef.current.clientWidth);
     }
   };
+  useEffect(() => {
+    if (imageIndex == 0) {
+      setTimeout(() => {
+        imageSliderRef.current!.style.transition = 'none';
+        imageSliderRef.current!.style.transform = `translateX(${width * images.length}px)`;
+        setImageIndex(images.length);
+      }, 200);
+    }
+    if (imageIndex == images.length + 1) {
+      setTimeout(() => {
+        imageSliderRef.current!.style.transition = 'none';
+        imageSliderRef.current!.style.transform = `translateX(${-1 * width * images.length}px)`;
+        setImageIndex(1);
+      }, 200);
+    }
+  }, [imageIndex]);
 
   // 맨 처음 렌더링했을때 width 초기화
   useEffect(() => {
@@ -82,6 +97,7 @@ function ImageSlider({ images }: any) {
       </button>
       <div className="image-slider__container" ref={imageRef}>
         <div
+          ref={imageSliderRef}
           className="image-slider__images"
           role="presentation"
           style={{
@@ -91,6 +107,12 @@ function ImageSlider({ images }: any) {
           onTouchEnd={onTouchUp}
           onTouchMove={handleTouchMove}
         >
+          <img
+            src={`/src/assets/images/${images[images.length - 1]}`}
+            width={width}
+            className="image-slider__image"
+            alt="sample"
+          />
           {images.map((image: string) => (
             <img
               src={`/src/assets/images/${image}`}
@@ -100,6 +122,12 @@ function ImageSlider({ images }: any) {
               alt="sample"
             />
           ))}
+          <img
+            src={`/src/assets/images/${images[0]}`}
+            width={width}
+            className="image-slider__image"
+            alt="sample"
+          />
         </div>
       </div>
       <button
