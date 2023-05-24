@@ -14,8 +14,8 @@
     overflow: hidden;
     .image-slider__images {
       display: flex;
-      transition: 0.2s;
       .image-slider__image {
+        max-height: 12rem;
         flex: none;
         object-fit: contain;
       }
