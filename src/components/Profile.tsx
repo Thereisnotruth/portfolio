@@ -35,7 +35,9 @@ function Profile() {
             <a href={profileJson.git}>{profileJson.git}</a>
           </div>
         </div>
-        <div className="profile__row hana">{profileJson.description}</div>
+        <div className="profile__row hana" style={{ borderBottom: 'none' }}>
+          {profileJson.description}
+        </div>
       </div>
     </div>
   );

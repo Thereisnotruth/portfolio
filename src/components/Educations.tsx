@@ -14,7 +14,11 @@ function Educations() {
       <div className="educations__container">
         <div className="educations__title hana">Educations</div>
         {educationJson['educations'].map((education: Education, index: number) => (
-          <div className="educations__row" key={index}>
+          <div
+            className="educations__row"
+            key={index}
+            style={index === educationJson['educations'].length - 1 ? { borderBottom: 'none' } : {}}
+          >
             <BsPencilFill className="educations__icon" />
             <div className="educations__label hana">
               <div>{education.name}</div>

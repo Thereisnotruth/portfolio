@@ -38,7 +38,7 @@ function Skills() {
             ))}
           </div>
         </div>
-        <div className="skills__row">
+        <div className="skills__row" style={{ borderBottom: 'none' }}>
           <SlPeople className="skills__icon" />
           <div className="skills__label hana">Collaborate</div>
           <div className="skills__content">
