@@ -1,7 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
+import { useRecoilValue } from 'recoil';
+
+import { modState } from '@atoms/modState';
 
 function Header({ setMarginTop }: any) {
+  const theme = useRecoilValue(modState);
   const headerRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -16,7 +20,7 @@ function Header({ setMarginTop }: any) {
   }, []);
 
   return (
-    <header className="header font dark" ref={headerRef}>
+    <header className={`header font ${theme}`} ref={headerRef}>
       <div className="header__content">
         <div className="header__logo">KOEH's Portfolio</div>
         <button className="header__nav-btn" onClick={handleNavBtnClick}>

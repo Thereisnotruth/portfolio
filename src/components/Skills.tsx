@@ -2,13 +2,15 @@ import { TbBrowserCheck } from 'react-icons/tb';
 import { BiServer } from 'react-icons/bi';
 import { TbCertificate } from 'react-icons/tb';
 import { SlPeople } from 'react-icons/sl';
-``;
+import { useRecoilValue } from 'recoil';
 
 import skillJson from '@data/skills.json';
+import { modState } from '@atoms/modState';
 
 function Skills() {
+  const theme = useRecoilValue(modState);
   return (
-    <div className="skills font light">
+    <div className={`skills font ${theme}`}>
       <div className="skills__container">
         <div className="skills__title">Skills</div>
         <div className="skills__row">

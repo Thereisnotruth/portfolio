@@ -1,5 +1,6 @@
 import { AiOutlineCopyright, AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { SiVelog } from 'react-icons/si';
+
 import profileJson from '@data/profile.json';
 
 function Footer() {

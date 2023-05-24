@@ -5,6 +5,6 @@ const { persistAtom } = recoilPersist();
 
 export const modState = atom({
   key: 'mod',
-  default: 0, // 0 - 라이트모드, 1 - 다크모드
+  default: 'light',
   effects_UNSTABLE: [persistAtom],
 });

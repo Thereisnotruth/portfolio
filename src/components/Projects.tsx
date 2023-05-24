@@ -1,9 +1,11 @@
 import { AiOutlineCalendar, AiOutlineSetting } from 'react-icons/ai';
 import { ImStack } from 'react-icons/im';
 import { FiTool } from 'react-icons/fi';
+import { useRecoilValue } from 'recoil';
 
 import ImageSlider from '@components/ImageSlider';
 import projectJson from '@data/projects.json';
+import { modState } from '@atoms/modState';
 
 interface Project {
   name: string;
@@ -19,8 +21,9 @@ interface Project {
 }
 
 function Projects() {
+  const theme = useRecoilValue(modState);
   return (
-    <div className="projects font light">
+    <div className={`projects font ${theme}`}>
       <div className="projects__container">
         <div className="projects__title">Projects</div>
         {projectJson.projects.map((project: Project) => (

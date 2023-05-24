@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: [
+      { find: '@atoms', replacement: '/src/atoms' },
       { find: '@data', replacement: '/src/data' },
       { find: '@styles', replacement: '/src/styles' },
       { find: '@pages', replacement: '/src/pages' },

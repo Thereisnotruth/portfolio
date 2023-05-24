@@ -1,12 +1,15 @@
 import { BsFillPersonFill, BsGithub } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { SiVelog } from 'react-icons/si';
+import { useRecoilValue } from 'recoil';
 
 import profileJson from '@data/profile.json';
+import { modState } from '@atoms/modState';
 
 function Profile() {
+  const theme = useRecoilValue(modState);
   return (
-    <div className="profile font light">
+    <div className={`profile font ${theme}`}>
       <div className="profile__container">
         <div className="profile__title">Profile</div>
         <div className="profile__row">

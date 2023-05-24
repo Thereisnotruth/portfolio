@@ -21,6 +21,7 @@
 
     "baseUrl": ".",
     "paths": {
+      "@atoms/*": ["src/atoms/*"],
       "@data/*": ["src/data/*"],
       "@styles/*": ["src/styles/*"],
       "@pages/*": ["src/pages/*"],

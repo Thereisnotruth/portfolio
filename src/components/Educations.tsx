@@ -1,6 +1,8 @@
 import { BsPencilFill } from 'react-icons/bs';
+import { useRecoilValue } from 'recoil';
 
 import educationJson from '@data/educations.json';
+import { modState } from '@atoms/modState';
 
 interface Education {
   name: string;
@@ -9,8 +11,9 @@ interface Education {
 }
 
 function Educations() {
+  const theme = useRecoilValue(modState);
   return (
-    <div className="educations font light">
+    <div className={`educations font ${theme}`}>
       <div className="educations__container">
         <div className="educations__title">Educations</div>
         {educationJson['educations'].map((education: Education, index: number) => (
