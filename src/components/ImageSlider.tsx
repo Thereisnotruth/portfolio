@@ -107,14 +107,14 @@ function ImageSlider({ images }: any) {
           onTouchMove={handleTouchMove}
         >
           <img
-            src={`/src/assets/images/${images[images.length - 1]}`}
+            src={`images/${images[images.length - 1]}`}
             width={width}
             className="image-slider__image"
             alt="sample"
           />
           {images.map((image: string) => (
             <img
-              src={`/src/assets/images/${image}`}
+              src={`images/${image}`}
               key={image}
               width={width}
               className="image-slider__image"
@@ -122,7 +122,7 @@ function ImageSlider({ images }: any) {
             />
           ))}
           <img
-            src={`/src/assets/images/${images[0]}`}
+            src={`images/${images[0]}`}
             width={width}
             className="image-slider__image"
             alt="sample"
