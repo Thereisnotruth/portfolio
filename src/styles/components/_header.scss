@@ -34,6 +34,14 @@
     overflow: hidden;
     width: 100%;
     li {
+      .header__controller {
+        button {
+          font-size: 1.4rem;
+          width: fit-content;
+          height: fit-content;
+          padding: 0;
+        }
+      }
       ul {
         margin-top: 0;
         padding: 0;
@@ -46,7 +54,7 @@
     }
   }
   .header__nav--clicked {
-    max-height: 180px;
+    max-height: 200px;
     @media only screen and (min-width: 481px) and (max-width: 768px) {
       max-height: 220px;
     }

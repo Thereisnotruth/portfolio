@@ -1,16 +1,25 @@
 import { useState, useRef, useEffect } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
-import { useRecoilValue } from 'recoil';
+import { MdDarkMode } from 'react-icons/md';
+import { useRecoilState } from 'recoil';
 
 import { modState } from '@atoms/modState';
 
 function Header({ setMarginTop }: any) {
-  const theme = useRecoilValue(modState);
+  const [theme, setTheme] = useRecoilState<string>(modState);
   const headerRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleNavBtnClick = () => {
     setIsOpen(!isOpen);
+  };
+
+  const onChangeTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
   };
 
   useEffect(() => {
@@ -33,6 +42,11 @@ function Header({ setMarginTop }: any) {
           <ul>Skills</ul>
           <ul>Education</ul>
           <ul>Projects</ul>
+          <ul className="header__controller">
+            <button type="button" onClick={onChangeTheme}>
+              <MdDarkMode />
+            </button>
+          </ul>
         </li>
       </div>
     </header>
