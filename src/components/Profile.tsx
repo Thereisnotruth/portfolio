@@ -6,7 +6,7 @@ import profileJson from '@data/profile.json';
 
 function Profile() {
   return (
-    <div className="profile font">
+    <div className="profile font light">
       <div className="profile__container">
         <div className="profile__title">Profile</div>
         <div className="profile__row">

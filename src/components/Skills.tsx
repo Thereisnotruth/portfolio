@@ -8,7 +8,7 @@ import skillJson from '@data/skills.json';
 
 function Skills() {
   return (
-    <div className="skills font">
+    <div className="skills font light">
       <div className="skills__container">
         <div className="skills__title">Skills</div>
         <div className="skills__row">

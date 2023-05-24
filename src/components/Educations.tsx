@@ -10,7 +10,7 @@ interface Education {
 
 function Educations() {
   return (
-    <div className="educations font">
+    <div className="educations font light">
       <div className="educations__container">
         <div className="educations__title">Educations</div>
         {educationJson['educations'].map((education: Education, index: number) => (

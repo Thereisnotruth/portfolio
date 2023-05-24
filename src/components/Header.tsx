@@ -16,7 +16,7 @@ function Header({ setMarginTop }: any) {
   }, []);
 
   return (
-    <header className="header font" ref={headerRef}>
+    <header className="header font dark" ref={headerRef}>
       <div className="header__content">
         <div className="header__logo">KOEH's Portfolio</div>
         <button className="header__nav-btn" onClick={handleNavBtnClick}>

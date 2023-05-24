@@ -1,6 +1,7 @@
 .educations {
   display: flex;
   border-bottom: 0.5px solid #cccccc;
+  font-size: 0.8rem;
   .educations__container {
     width: 80%;
     margin: 0 auto;
@@ -23,10 +24,6 @@
       }
       .educations__content {
         width: 40%;
-        a {
-          color: black;
-          text-decoration: none;
-        }
       }
     }
   }

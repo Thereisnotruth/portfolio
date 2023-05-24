@@ -20,7 +20,7 @@ interface Project {
 
 function Projects() {
   return (
-    <div className="projects font">
+    <div className="projects font light">
       <div className="projects__container">
         <div className="projects__title">Projects</div>
         {projectJson.projects.map((project: Project) => (
@@ -64,7 +64,7 @@ function Projects() {
               <div className="projects__content">
                 <div className="projects__feature">
                   {project.features.map((feature: string) => (
-                    <div key={feature}>{feature}</div>
+                    <div key={feature}>{`- ${feature}`}</div>
                   ))}
                 </div>
               </div>
