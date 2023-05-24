@@ -16,7 +16,9 @@
       .projects__row {
         display: flex;
         align-items: center;
+        border-bottom: 0.5px solid #cccccc;
         .projects__icon {
+          font-size: 1.5rem;
           width: 10%;
         }
         .projects__label {
@@ -27,8 +29,12 @@
           flex-wrap: wrap;
           justify-content: center;
           width: 70%;
+          .projects__feature {
+            text-align: start;
+          }
           .projects__skills {
             display: flex;
+            flex-wrap: wrap;
             .projects__skill {
               padding: 0 0.5rem;
             }
