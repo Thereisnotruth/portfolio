@@ -13,6 +13,28 @@
       .projects__name {
         font-size: 1.6rem;
       }
+      .projects__row {
+        display: flex;
+        align-items: center;
+        .projects__icon {
+          width: 10%;
+        }
+        .projects__label {
+          width: 20%;
+        }
+        .projects__content {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 70%;
+          .projects__skills {
+            display: flex;
+            .projects__skill {
+              padding: 0 0.5rem;
+            }
+          }
+        }
+      }
     }
   }
 }
