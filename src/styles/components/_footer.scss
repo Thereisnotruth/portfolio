@@ -3,4 +3,26 @@
 .footer {
   background-color: color.$color-1;
   color: white;
+  .footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.2rem 0;
+    a {
+      margin: 0 0.8rem;
+      color: white;
+      font-size: 1.8rem;
+      text-decoration: none;
+    }
+    .footer__copyright {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      font-size: 1rem;
+      .footer__copyright-icon {
+        padding: 0 0.5rem;
+      }
+    }
+  }
 }
