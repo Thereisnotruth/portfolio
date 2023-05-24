@@ -16,7 +16,9 @@ function Skills() {
           <div className="skills__label hana">Frontend</div>
           <div className="skills__content">
             {skillJson.frontend.map((value: string) => (
-              <span className="skills__item hana">{value}</span>
+              <span className="skills__item hana" key={value}>
+                {value}
+              </span>
             ))}
           </div>
         </div>
@@ -25,7 +27,9 @@ function Skills() {
           <div className="skills__label hana">Backend</div>
           <div className="skills__content">
             {skillJson.backend.map((value: string) => (
-              <span className="skills__item hana">{value}</span>
+              <span className="skills__item hana" key={value}>
+                {value}
+              </span>
             ))}
           </div>
         </div>
@@ -34,7 +38,9 @@ function Skills() {
           <div className="skills__label hana">Certificate</div>
           <div className="skills__content">
             {skillJson.certificate.map((value: string) => (
-              <span className="skills__item hana">{value}</span>
+              <span className="skills__item hana" key={value}>
+                {value}
+              </span>
             ))}
           </div>
         </div>
@@ -43,7 +49,9 @@ function Skills() {
           <div className="skills__label hana">Collaborate</div>
           <div className="skills__content">
             {skillJson.collaborate.map((value: string) => (
-              <span className="skills__item hana">{value}</span>
+              <span className="skills__item hana" key={value}>
+                {value}
+              </span>
             ))}
           </div>
         </div>

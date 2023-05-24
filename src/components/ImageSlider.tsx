@@ -78,7 +78,6 @@ function ImageSlider({ images }: any) {
   useEffect(() => {
     if (imageRef.current !== null) {
       setWidth(imageRef.current.clientWidth);
-      console.log(imageRef.current.clientWidth);
     }
     window.addEventListener('resize', resize);
     return () => {

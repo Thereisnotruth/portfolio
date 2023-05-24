@@ -24,7 +24,7 @@ function Projects() {
       <div className="projects__container">
         <div className="projects__title hana">Projects</div>
         {projectJson.projects.map((project: Project) => (
-          <div className="projects__project">
+          <div className="projects__project" key={project.name}>
             <div className="projects__name hana">{project.name}</div>
             <ImageSlider images={project.images} />
             <div className="projects__row">
