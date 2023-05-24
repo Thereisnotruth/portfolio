@@ -20,22 +20,22 @@ interface Project {
 
 function Projects() {
   return (
-    <div className="projects">
+    <div className="projects font">
       <div className="projects__container">
-        <div className="projects__title hana">Projects</div>
+        <div className="projects__title">Projects</div>
         {projectJson.projects.map((project: Project) => (
           <div className="projects__project" key={project.name}>
-            <div className="projects__name hana">{project.name}</div>
+            <div className="projects__name">{project.name}</div>
             <ImageSlider images={project.images} />
             <div className="projects__row">
               <AiOutlineCalendar className="projects__icon" />
-              <div className="projects__label hana">개발 기간</div>
-              <div className="projects__content hana">{project.period}</div>
+              <div className="projects__label">개발 기간</div>
+              <div className="projects__content">{project.period}</div>
             </div>
             <div className="projects__row">
               <ImStack className="projects__icon" />
-              <div className="projects__label hana">기술 스택</div>
-              <div className="projects__content hana">
+              <div className="projects__label">기술 스택</div>
+              <div className="projects__content">
                 <div className="projects__skills">
                   {project.skills.map((skill: string) => (
                     <span className="projects__skill" key={skill}>
@@ -47,8 +47,8 @@ function Projects() {
             </div>
             <div className="projects__row">
               <FiTool className="projects__icon" />
-              <div className="projects__label hana">역할</div>
-              <div className="projects__content hana">
+              <div className="projects__label">역할</div>
+              <div className="projects__content">
                 <div className="projects__skills">
                   {project.role.map((role: string) => (
                     <span className="projects__skill" key={role}>
@@ -60,8 +60,8 @@ function Projects() {
             </div>
             <div className="projects__row">
               <AiOutlineSetting className="projects__icon" />
-              <div className="projects__label hana">주요 기능</div>
-              <div className="projects__content hana">
+              <div className="projects__label">주요 기능</div>
+              <div className="projects__content">
                 <div className="projects__feature">
                   {project.features.map((feature: string) => (
                     <div key={feature}>{feature}</div>
@@ -69,7 +69,7 @@ function Projects() {
                 </div>
               </div>
             </div>
-            <div className="projects__row hana">{project.summary}</div>
+            <div className="projects__row">{project.summary}</div>
           </div>
         ))}
       </div>

@@ -16,15 +16,15 @@ function Header({ setMarginTop }: any) {
   }, []);
 
   return (
-    <header className="header" ref={headerRef}>
+    <header className="header font" ref={headerRef}>
       <div className="header__content">
-        <div className="header__logo hana">KOEH's Portfolio</div>
+        <div className="header__logo">KOEH's Portfolio</div>
         <button className="header__nav-btn" onClick={handleNavBtnClick}>
           <AiOutlineMenu />
         </button>
       </div>
       <div className={`header__nav ${isOpen ? 'header__nav--clicked' : ''}`}>
-        <li className="hana">
+        <li>
           <ul>Profile</ul>
           <ul>Skills</ul>
           <ul>Education</ul>

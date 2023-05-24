@@ -4,7 +4,7 @@ import profileJson from '@data/profile.json';
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer font">
       <div className="footer__content">
         <a href={profileJson.git}>
           <AiOutlineGithub />
