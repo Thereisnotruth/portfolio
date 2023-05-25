@@ -33,3 +33,27 @@
     }
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .profile {
+    .profile__container {
+      .profile__title {
+        font-size: 2.4rem;
+      }
+      .profile__row {
+        font-size: 1.2rem;
+        .profile__icon {
+          font-size: 2rem;
+        }
+        .profile__label {
+          font-size: 1.2rem;
+        }
+        .profile__content {
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
