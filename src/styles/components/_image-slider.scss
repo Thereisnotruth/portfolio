@@ -14,6 +14,7 @@
     overflow: hidden;
     .image-slider__images {
       display: flex;
+      cursor: pointer;
       .image-slider__image {
         max-height: 12rem;
         flex: none;

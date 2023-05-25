@@ -34,14 +34,6 @@
     overflow: hidden;
     width: 100%;
     li {
-      .header__controller {
-        button {
-          font-size: 1.4rem;
-          width: fit-content;
-          height: fit-content;
-          padding: 0;
-        }
-      }
       ul {
         margin-top: 0;
         padding: 0;
@@ -51,12 +43,45 @@
           font-size: 1.2rem;
         }
       }
+      .header__controller {
+        button {
+          font-size: 1.4rem;
+          width: fit-content;
+          height: fit-content;
+          padding: 0;
+        }
+      }
     }
   }
   .header__nav--clicked {
     max-height: 200px;
-    @media only screen and (min-width: 481px) and (max-width: 768px) {
-      max-height: 220px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    .header__content {
+      .header__logo {
+        font-size: 2rem;
+      }
+      .header__nav-btn {
+        font-size: 2rem;
+      }
+    }
+    .header__nav {
+      li {
+        ul {
+          font-size: 1.4rem;
+        }
+        .header__controller {
+          button {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+    .header__nav--clicked {
+      max-height: 270px;
     }
   }
 }
