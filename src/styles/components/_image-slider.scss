@@ -23,3 +23,33 @@
     }
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .image-slider {
+    .image-slider__control {
+      font-size: 3rem;
+    }
+    .image-slider__container {
+      .image-slider__images {
+        .image-slider__image {
+          max-height: 20rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .image-slider {
+    .image-slider__control {
+      font-size: 3rem;
+    }
+    .image-slider__container {
+      .image-slider__images {
+        .image-slider__image {
+          max-height: 36rem;
+        }
+      }
+    }
+  }
+}
