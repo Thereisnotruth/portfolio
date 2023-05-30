@@ -2,6 +2,7 @@
   display: flex;
   border-bottom: 0.5px solid #cccccc;
   font-size: 0.8rem;
+  padding-top: 4rem;
   .educations__container {
     width: 100%;
     margin: 0 auto;
@@ -38,6 +39,21 @@
       .educations__row {
         .educations__icon {
           font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .educations {
+    font-size: 2rem;
+    .educations__container {
+      .educations__title {
+        font-size: 3.6rem;
+      }
+      .educations__row {
+        .educations__icon {
+          font-size: 3rem;
         }
       }
     }

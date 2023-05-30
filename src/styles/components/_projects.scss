@@ -2,6 +2,7 @@
   display: flex;
   border-bottom: 0.5px solid #cccccc;
   font-size: 0.8rem;
+  padding-top: 4rem;
   .projects__container {
     width: 100%;
     margin: 0 auto;
@@ -60,6 +61,26 @@
         .projects__row {
           .projects__icon {
             font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .projects {
+    font-size: 2rem;
+    .projects__container {
+      .projects__title {
+        font-size: 3.6rem;
+      }
+      .projects__project {
+        .projects__name {
+          font-size: 3rem;
+        }
+        .projects__row {
+          .projects__icon {
+            font-size: 3rem;
           }
         }
       }

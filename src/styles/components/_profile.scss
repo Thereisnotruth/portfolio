@@ -59,3 +59,26 @@
     }
   }
 }
+@media only screen and (min-width: 1024px) {
+  .profile {
+    .profile__container {
+      .profile__title {
+        font-size: 3.6rem;
+      }
+      .profile__row {
+        font-size: 2rem;
+        .profile__icon {
+          font-size: 3rem;
+        }
+        .profile__label {
+          font-size: 2rem;
+        }
+        .profile__content {
+          a {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
