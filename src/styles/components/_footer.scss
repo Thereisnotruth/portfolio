@@ -13,6 +13,10 @@
       color: white;
       font-size: 1.8rem;
       text-decoration: none;
+      &:hover {
+        transition: all 0.2s ease-in-out;
+        color: color.$color-2;
+      }
     }
     .footer__copyright {
       display: flex;
