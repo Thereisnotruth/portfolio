@@ -38,13 +38,12 @@
           padding: 0;
           z-index: 1;
           text-align: center;
-          @media only screen and (min-width: 481px) and (max-width: 768px) {
-            font-size: 1.2rem;
-          }
         }
         .header__controller--pc {
           display: none;
           button {
+            display: flex;
+            align-items: center;
             font-size: 1.4rem;
             width: fit-content;
             height: fit-content;
@@ -52,7 +51,11 @@
           }
         }
         .header__controller {
+          display: flex;
+          justify-content: center;
           button {
+            display: flex;
+            align-items: center;
             font-size: 1.4rem;
             width: fit-content;
             height: fit-content;
