@@ -8,10 +8,16 @@ function ImageSlider({ images }: any) {
   const [startX, setStartX] = useState<number>(0);
   const [transX, setTransX] = useState<number>(0);
   const [imageIndex, setImageIndex] = useState<number>(1);
+  const [isMouseDown, setIsMouseDown] = useState<boolean>(false);
 
   // 드래그하기 위해 터치 시 시작 좌표 설정
   const onTouchDown = (event: React.TouchEvent<HTMLElement>) => {
     setStartX(event.touches[0].clientX);
+  };
+
+  const onMouseDown = (event: React.MouseEvent<HTMLElement>) => {
+    setIsMouseDown(true);
+    setStartX(event.clientX);
   };
 
   // 왼쪽 이미지 보기
@@ -44,6 +50,7 @@ function ImageSlider({ images }: any) {
     }
     // 드래그 후 transX를 0으로 초기화
     setTransX(0);
+    setIsMouseDown(false);
   };
 
   // 드래그하면서 transX의 값 변경
@@ -51,12 +58,22 @@ function ImageSlider({ images }: any) {
     // 현재 터치 중인 x좌표 - 시작 x좌표
     setTransX(event.touches[0].clientX - startX);
   };
+  const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
+    if (isMouseDown) {
+      setTransX(event.clientX - startX);
+    }
+  };
 
   const resize = () => {
     if (imageRef.current !== null) {
       setWidth(imageRef.current.clientWidth);
     }
   };
+
+  const handleImageClick = (event: React.MouseEvent<HTMLElement>) => {
+    event.stopPropagation();
+  };
+
   useEffect(() => {
     if (imageIndex == 0) {
       setTimeout(() => {
@@ -103,8 +120,12 @@ function ImageSlider({ images }: any) {
             transform: `translateX(${-1 * imageIndex * width + transX}px)`,
           }}
           onTouchStart={onTouchDown}
+          onMouseDown={onMouseDown}
           onTouchEnd={onTouchUp}
+          onMouseUp={onTouchUp}
           onTouchMove={handleTouchMove}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={onTouchUp}
         >
           <img
             src={`images/${images[images.length - 1]}`}
@@ -126,6 +147,7 @@ function ImageSlider({ images }: any) {
             width={width}
             className="image-slider__image"
             alt="sample"
+            onClick={handleImageClick}
           />
         </div>
       </div>
