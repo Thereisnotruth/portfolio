@@ -26,35 +26,44 @@
       padding: 0.5rem;
       border: 0.5px solid #cccccc;
     }
-  }
-  .header__nav {
-    max-height: 0;
-    transition: max-height 0.2s ease-in-out;
-    list-style-type: none;
-    overflow: hidden;
-    width: 100%;
-    li {
-      ul {
-        margin-top: 0;
-        padding: 0;
-        z-index: 1;
-        text-align: center;
-        @media only screen and (min-width: 481px) and (max-width: 768px) {
-          font-size: 1.2rem;
-        }
-      }
-      .header__controller {
-        button {
-          font-size: 1.4rem;
-          width: fit-content;
-          height: fit-content;
+    .header__nav {
+      max-height: 0;
+      transition: max-height 0.2s ease-in-out;
+      list-style-type: none;
+      overflow: hidden;
+      width: 100%;
+      li {
+        ul {
+          margin-top: 0;
           padding: 0;
+          z-index: 1;
+          text-align: center;
+          @media only screen and (min-width: 481px) and (max-width: 768px) {
+            font-size: 1.2rem;
+          }
+        }
+        .header__controller--pc {
+          display: none;
+          button {
+            font-size: 1.4rem;
+            width: fit-content;
+            height: fit-content;
+            padding: 0;
+          }
+        }
+        .header__controller {
+          button {
+            font-size: 1.4rem;
+            width: fit-content;
+            height: fit-content;
+            padding: 0;
+          }
         }
       }
     }
-  }
-  .header__nav--clicked {
-    max-height: 200px;
+    .header__nav--clicked {
+      max-height: 200px;
+    }
   }
 }
 
@@ -67,21 +76,53 @@
       .header__nav-btn {
         font-size: 2rem;
       }
-    }
-    .header__nav {
-      li {
-        ul {
-          font-size: 1.4rem;
-        }
-        .header__controller {
-          button {
-            font-size: 1.8rem;
+      .header__nav {
+        li {
+          ul {
+            font-size: 1.4rem;
+          }
+          .header__controller {
+            button {
+              font-size: 1.8rem;
+            }
           }
         }
       }
+      .header__nav--clicked {
+        max-height: 270px;
+      }
     }
-    .header__nav--clicked {
-      max-height: 270px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    .header__content {
+      .header__logo {
+        font-size: 2rem;
+      }
+      .header__nav-btn {
+        display: none;
+      }
+      .header__nav {
+        max-height: fit-content;
+        width: fit-content;
+        li {
+          display: flex;
+          align-items: center;
+          ul {
+            margin: 0;
+            font-size: 1.4rem;
+            padding: 0 1rem;
+          }
+          .header__controller--pc {
+            display: block;
+          }
+
+          .header__controller {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

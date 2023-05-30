@@ -35,19 +35,24 @@ function Header({ setMarginTop }: any) {
         <button className="header__nav-btn" onClick={handleNavBtnClick}>
           <AiOutlineMenu />
         </button>
-      </div>
-      <div className={`header__nav ${isOpen ? 'header__nav--clicked' : ''}`}>
-        <li>
-          <ul>Profile</ul>
-          <ul>Skills</ul>
-          <ul>Education</ul>
-          <ul>Projects</ul>
-          <ul className="header__controller">
-            <button type="button" onClick={onChangeTheme}>
-              <MdDarkMode />
-            </button>
-          </ul>
-        </li>
+        <div className={`header__nav ${isOpen ? 'header__nav--clicked' : ''}`}>
+          <li>
+            <ul className="header__controller--pc">
+              <button type="button" onClick={onChangeTheme}>
+                <MdDarkMode />
+              </button>
+            </ul>
+            <ul>Profile</ul>
+            <ul>Skills</ul>
+            <ul>Education</ul>
+            <ul>Projects</ul>
+            <ul className="header__controller">
+              <button type="button" onClick={onChangeTheme}>
+                <MdDarkMode />
+              </button>
+            </ul>
+          </li>
+        </div>
       </div>
     </header>
   );

@@ -8,6 +8,7 @@ import Educations from '@components/Educations';
 import Projects from '@components/Projects';
 
 function MainPage() {
+  // const [headerHeight, setHeaderHeight] = useState<number>(0);
   const [marginTop, setMarginTop] = useState<number>(0);
   return (
     <div className="main-page">
